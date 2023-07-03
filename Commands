@@ -1,0 +1,49 @@
+https://gist.github.com/Pulimet/5013acf2cd5b28e55036c82c91bd56d8
+
+Device Management:
+
+adb devices: Lists all connected devices.
+adb connect <device>: Connects to a device over TCP/IP.
+adb disconnect <device>: Disconnects from a device.
+adb shell: Opens a shell on the device.
+adb reboot: Reboots the device normally.
+adb reboot bootloader: Reboots the device into bootloader or fastboot mode.
+adb reboot recovery: Reboots the device into recovery mode.
+adb sideload <filename.zip>: Sideloading an OTA update package.
+adb root: Restarts the adbd daemon with root permissions.
+adb disable-verity: Disables dm-verity checking on a userdebug build.
+adb remount: Remounts the /system partition as read-write.
+
+File Management:
+
+adb push <local> <remote>: Pushes a file from the computer to the device.
+adb pull <remote> <local>: Pulls a file from the device to the computer.
+adb install <filename.apk>: Installs an APK file onto the device.
+adb uninstall <package>: Uninstalls an application from the device.
+adb backup <package>: Backs up an application to the computer.
+adb restore <backup.ab>: Restores data from a backup file to the device.
+adb shell rm <file>: Deletes a file on the device.
+adb shell mv <old> <new>: Renames or moves a file on the device.
+adb shell ls <directory>: Lists files and directories on the device.
+
+Logging and Debugging:
+
+adb logcat: Prints the device log in real-time.
+adb bugreport: Generates a full bug report of the device.
+adb shell dumpsys: Provides information about various system services.
+adb shell am start -n <package>/<activity>: Starts an activity on the device.
+adb shell am broadcast -a <intent>: Sends a broadcast intent to the device.
+adb shell input text <text>: Injects text input into the device.
+adb shell input keyevent <keycode>: Sends a key event to the device.
+adb shell screenrecord <filename.mp4>: Records the screen of the device.
+adb shell screencap <filename.png>: Captures a screenshot and saves it to the device.
+
+Package Management:
+
+adb shell pm list packages: Lists all installed packages.
+adb shell pm path <package>: Prints the path of an installed package.
+adb shell pm install [-l] <filename.apk>: Installs an APK file with optional -l for forward-locking.
+adb shell pm uninstall <package>: Uninstalls a specific package.
+adb shell pm clear <package>: Clears the data of a specific package.
+adb shell pm grant <package> <permission>: Grants a runtime permission to an app.
+adb shell pm revoke <package> <permission>: Revokes a runtime permission from an app.
